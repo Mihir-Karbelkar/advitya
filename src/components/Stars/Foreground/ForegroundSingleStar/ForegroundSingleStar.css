@@ -1,0 +1,118 @@
+@keyframes HorizontalFlare{
+    0% {
+        width: 7px;
+    }
+    100% {
+        width: 20px;
+    }
+
+}
+
+@keyframes VerticalFlare{
+    0% {
+        height: 7px;
+    }
+    100% {
+        height: 20px;
+    }
+
+}
+
+.ForegroundSingleStar {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    z-index: -2;
+}
+
+.ForegroundSingleStarCore{
+    position: absolute;
+    background-color: white;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+}
+
+.ForegroundSingleStarHorizontalFlare{
+    position: absolute;
+    background-color: white;
+    width: 20px;
+    height: 7px;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    animation: HorizontalFlare 1s ease-in-out 0s infinite alternate;
+}
+
+.ForegroundSingleStarVerticalFlare{
+    position: absolute;
+    background-color: white;
+    width: 7px;
+    height: 20px;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    animation: VerticalFlare 1s ease-in-out 0s infinite alternate;
+}
+
+.ForegroundSingleStar-1 {
+    position: absolute;
+    top: 10%;
+    left: 22%;
+}
+
+.ForegroundSingleStar-2 {
+    position: absolute;
+    top: 85%;
+    left: 85%;
+}
+
+.ForegroundSingleStar-3 {
+    position: absolute;
+    top: 5%;
+    left: 60%;
+}
+
+.ForegroundSingleStar-4 {
+    position: absolute;
+    top: 90%;
+    left: 30%;
+}
+
+.ForegroundSingleStar-5 {
+    position: absolute;
+    top: 70%;
+    left: 15%;
+}
+
+.ForegroundSingleStar-6 {
+    position: absolute;
+    top: 15%;
+    left: 90%;
+}
+
+.ForegroundSingleStar-7 {
+    position: absolute;
+    top: 87%;
+    left: 5%;
+}
+
+.ForegroundSingleStar-8 {
+    position: absolute;
+    top: 50%;
+    left: 80%;
+}
+
+.ForegroundSingleStar-9 {
+    position: absolute;
+    top: 40%;
+    left: 7%;
+}

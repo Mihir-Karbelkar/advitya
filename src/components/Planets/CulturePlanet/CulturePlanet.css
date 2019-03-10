@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou");
+
+.CulturePlanetContainer {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
+  z-index: 2;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.CulturePlanet {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  background-color: #7100c9;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  z-index: 2;
+  box-shadow: inset -30px 0 rgba(100, 0, 0, 0.2),
+    0 0 0 10px rgba(255, 255, 255, 0.5), 0 0 0 15px rgba(255, 255, 255, 0.2),
+    0 0 0 18px rgba(255, 255, 255, 0.1), 0 0 0 30px rgba(246, 206, 234, 0.1),
+    0 0 0 35px rgba(246, 206, 234, 0.15), 0 0 0 50px rgba(242, 183, 224, 0.3),
+    0 0 0 120px rgba(239, 160, 214, 0.2), 0 0 0 240px rgba(236, 147, 208, 0.1),
+    0 0 0 500px rgba(234, 132, 202, 0.025);
+}
+
+.CulturePlanet:before {
+  content: "";
+  position: absolute;
+  background: #ff7817;
+  height: 30px;
+  width: 75px;
+  left: 0;
+  top: 50px;
+  display: block;
+  border-radius: 40px;
+  -webkit-animation: rotateElement linear 25s infinite;
+  animation: rotateElement liner 25s infinite;
+  box-shadow: 70px 75px 0 -5px #ff7817, 5px 35px 0 -3px #ff7817,
+    35px 125px 0 -9px #ff7817, 120px -15px 0 -7px #ff7817,
+    135px -55px 0 -9px #ff7817, 150px 25px 0 7px #ff7817,
+    220px 70px 0 -2px #ff7817, 235px -35px 0 -3px #ff7817,
+    280px 85px 0 3px #ff7817, 320px 30px 0 1px #ff7817, 400px 0 0 0 #ff7817,
+    470px 75px 0 -5px #ff7817, 405px 35px 0 -3px #ff7817,
+    435px 125px 0 -9px #ff7817, 520px -15px 0 -7px #ff7817,
+    535px -55px 0 -9px #ff7817, 550px 25px 0 7px #ff7817,
+    620px 70px 0 -2px #ff7817, 635px -35px 0 -3px #ff7817,
+    680px 85px 0 3px #ff7817, 720px 30px 0 1px #ff7817;
+}
+
+.CulturePlanetShadow {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  position: absolute;
+  background-color: transparent;
+  z-index: 4;
+  box-shadow: inset -30px 0 rgba(0, 0, 0, 0.1);
+}
+
+@-webkit-keyframes rotateElement {
+  0% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(-400px, 0);
+    transform: translate(-400px, 0);
+  }
+}
+@keyframes rotateElement {
+  0% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(-400px, 0);
+    transform: translate(-400px, 0);
+  }
+}
+
+.CulturePlanetHead {
+  position: absolute;
+  color: white;
+  z-index: 10;
+  text-align: center;
+  font-family: "ZCOOL QingKe HuangYou", cursive;
+  width: 100%;
+  top: 60%;
+  transform: -50% -50%;
+}
+
+.CulturePlanetHead h1 {
+  font-size: 50px;
+}

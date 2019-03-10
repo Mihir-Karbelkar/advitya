@@ -1,0 +1,39 @@
+.nav-text,
+.nav-number,
+.bar {
+  float: left;
+  margin-right: 20px;
+  margin-top: 40px;
+}
+#nav {
+  position: fixed;
+  top: 30%;
+  z-index: 5;
+  left: 10%;
+}
+span {
+  margin-right: 30px;
+}
+.nav-item {
+  display: flex;
+  align-items: center;
+  height: 60px;
+}
+.active {
+  font-size: large;
+  font-weight: 800;
+  margin-left: -2.5px;
+}
+.mobile {
+  display: none;
+}
+.bar {
+  background-color: red;
+  box-sizing: border-box;
+  height: 110%;
+}
+.active > .bar {
+  width: 10px;
+  margin-left: -3px;
+  transition: ease-in-out 0s;
+}

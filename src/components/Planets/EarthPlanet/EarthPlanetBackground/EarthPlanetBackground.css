@@ -1,0 +1,54 @@
+.CollectionOfItems {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background-color: #7100C9;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
+.Trophy{
+    position: absolute;
+    top: 0%;
+    left: 75%;
+}
+
+.Medal{
+    position: absolute;
+    top: 17%;
+    left: 75%;
+}
+
+.SportsItem-1 img{
+    -webkit-transform: rotate(-30deg);
+    transform: rotate(-30deg);
+}
+
+.SportsItem-2 img{
+    -webkit-transform: rotate(30deg);
+    transform: rotate(30deg);
+}
+
+.SportsItem-3 img{
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
+.SportsItem-4 img{
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.EarthPlanetContainer:hover .SportsItem img{
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    transition-duration: 0.5s;
+    transition-delay: 0.5s;
+    animation: none;
+}
+
+.SportsItem img {
+    width: 200px;
+    transform-origin: -25% 50%;
+    transition-duration: 0.5s;
+}

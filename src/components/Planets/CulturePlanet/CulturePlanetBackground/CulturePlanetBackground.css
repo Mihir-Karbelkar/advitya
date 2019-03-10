@@ -1,0 +1,157 @@
+@keyframes PetalIdle1 {
+  0% {
+    transform: rotate(295deg);
+    -webkit-transform: rotate(295deg);
+  }
+  100% {
+    transform: rotate(305deg);
+    -webkit-transform: rotate(305deg);
+  }
+}
+
+@keyframes PetalIdle2 {
+  0% {
+    transform: rotate(-5deg);
+    -webkit-transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(5deg);
+    -webkit-transform: rotate(5deg);
+  }
+}
+
+@keyframes PetalIdle3 {
+  0% {
+    transform: rotate(55deg);
+    -webkit-transform: rotate(55deg);
+  }
+  100% {
+    transform: rotate(65deg);
+    -webkit-transform: rotate(65deg);
+  }
+}
+
+@keyframes PetalIdle4 {
+  0% {
+    transform: rotate(125deg);
+    -webkit-transform: rotate(125deg);
+  }
+  100% {
+    transform: rotate(115deg);
+    -webkit-transform: rotate(115deg);
+  }
+}
+
+@keyframes PetalIdle5 {
+  0% {
+    transform: rotate(185deg);
+    -webkit-transform: rotate(185deg);
+  }
+  100% {
+    transform: rotate(175deg);
+    -webkit-transform: rotate(175deg);
+  }
+}
+
+@keyframes PetalIdle6 {
+  0% {
+    transform: rotate(245deg);
+    -webkit-transform: rotate(245deg);
+  }
+  100% {
+    transform: rotate(235deg);
+    -webkit-transform: rotate(235deg);
+  }
+}
+
+.CulturePlanetBackground {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.Flower {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  background-color: #7100c9;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.Petal {
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  opacity: 1;
+  transition-duration: 0.5s;
+}
+
+.Petal-1 img {
+  -webkit-transform: rotate(295deg);
+  transform: rotate(295deg);
+  z-index: 0;
+  animation: PetalIdle1 4s ease-in-out 0.5s infinite alternate;
+}
+
+.Petal-2 img {
+  -webkit-transform: rotate(-5deg);
+  transform: rotate(-5deg);
+  z-index: 1;
+  animation: PetalIdle2 4s ease-in-out 0.5s infinite alternate;
+}
+
+.Petal-3 img {
+  -webkit-transform: rotate(55deg);
+  transform: rotate(55deg);
+  z-index: 2;
+  animation: PetalIdle3 4s ease-in-out 0.5s infinite alternate;
+}
+
+.Petal-4 img {
+  -webkit-transform: rotate(125deg);
+  transform: rotate(125deg);
+  z-index: 0;
+  animation: PetalIdle4 4s ease-in-out 0.5s infinite alternate;
+}
+
+.Petal-5 img {
+  -webkit-transform: rotate(185deg);
+  transform: rotate(185deg);
+  z-index: 1;
+  animation: PetalIdle5 4s ease-in-out 0.5s infinite alternate;
+}
+
+.Petal-6 img {
+  -webkit-transform: rotate(245deg);
+  transform: rotate(245deg);
+  z-index: 2;
+  animation: PetalIdle6 4s ease-in-out 0.5s infinite alternate;
+}
+
+.Petal img {
+  width: 350px;
+  top: 2px;
+  transform-origin: 0% 50%;
+  transition-delay: 0s;
+  transition-duration: 0.5s;
+}
+
+.hide .Petal {
+  opacity: 0;
+  transition-duration: 0.5s;
+}
+
+.hide .Petal img {
+  transform: rotate(-5deg);
+  -webkit-transform: rotate(-5deg);
+  animation-name: none;
+  transition-delay: 1s;
+}

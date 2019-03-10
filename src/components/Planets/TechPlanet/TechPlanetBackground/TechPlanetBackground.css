@@ -1,0 +1,80 @@
+@keyframes GearIdle {
+  0% {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+.TechPlanetBackground {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.GearBoard {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  background-color: #7100c9;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.Gear {
+  position: absolute;
+  z-index: 1;
+}
+
+.Gear-1 img {
+  position: absolute;
+  top: 80px;
+  left: 80px;
+  width: 200px;
+  transition-duration: 0.5s;
+  animation: GearIdle 6s linear 0.5s infinite;
+}
+
+.Gear-2 img {
+  position: absolute;
+  top: 50px;
+  left: -80px;
+  width: 200px;
+  transition-duration: 0.5s;
+  animation: GearIdle 12s linear 0.5s infinite reverse;
+}
+
+.Gear-3 img {
+  position: absolute;
+  top: -100px;
+  left: -100px;
+  width: 200px;
+  transition-duration: 0.5s;
+  animation: GearIdle 12s linear 0.5s infinite;
+}
+
+.Gear-4 img {
+  position: absolute;
+  top: -90px;
+  left: 80px;
+  width: 200px;
+  transition-duration: 0.5s;
+  animation: GearIdle 12s linear 0.5s infinite reverse;
+}
+
+.hide .Gear img {
+  position: absolute;
+  transition-duration: 0.5s;
+  top: 0px;
+  left: 0px;
+}

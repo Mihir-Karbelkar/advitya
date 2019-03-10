@@ -1,0 +1,83 @@
+.EarthPlanetContainer {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.EarthPlanet {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  background-color: #3380b5;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  z-index: 2;
+  box-shadow: inset -30px 0 rgba(0, 0, 0, 0.2),
+    0 0 0 10px rgba(108, 255, 239, 0.2), 0 0 0 15px rgba(108, 201, 255, 0.15),
+    0 0 0 18px rgba(108, 201, 255, 0.05), 0 0 0 30px rgba(108, 201, 255, 0.05),
+    0 0 0 35px rgba(108, 201, 255, 0.03), 0 0 0 50px rgba(108, 201, 255, 0.03),
+    0 0 0 120px rgba(105, 255, 232, 0.11), 0 0 0 240px rgba(108, 201, 255, 0.08),
+    0 0 0 500px rgba(108, 201, 255, 0.025);
+}
+
+.EarthPlanet:before {
+  content: "";
+  position: absolute;
+  background: #85c567;
+  height: 30px;
+  width: 75px;
+  left: 0;
+  top: 50px;
+  display: block;
+  border-radius: 40px;
+  -webkit-animation: rotateElement linear 25s infinite;
+  animation: rotateElement liner 25s infinite;
+  box-shadow: 0px 75px 0 -5px #85c567, 5px 35px 0 -3px #85c567,
+    35px 125px 0 -9px #85c567, 120px -15px 0 -7px #85c567,
+    135px -55px 0 -9px #85c567, 150px 25px 0 7px #85c567,
+    220px 70px 0 -2px #85c567, 235px -35px 0 -3px #85c567,
+    280px 85px 0 3px #85c567, 320px 30px 0 1px #85c567, 400px 0 0 0 #85c567,
+    400px 75px 0 -5px #85c567, 405px 35px 0 -3px #85c567,
+    435px 125px 0 -9px #85c567, 520px -15px 0 -7px #85c567,
+    535px -55px 0 -9px #85c567, 550px 25px 0 7px #85c567,
+    620px 70px 0 -2px #85c567, 635px -35px 0 -3px #85c567,
+    680px 85px 0 3px #85c567, 720px 30px 0 1px #85c567;
+}
+
+.EarthPlanetShadow {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  position: absolute;
+  background-color: transparent;
+  z-index: 4;
+  box-shadow: inset -30px 0 rgba(0, 0, 0, 0.1);
+}
+
+@-webkit-keyframes rotateElement {
+  0% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(-400px, 0);
+    transform: translate(-400px, 0);
+  }
+}
+@keyframes rotateElement {
+  0% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(-400px, 0);
+    transform: translate(-400px, 0);
+  }
+}
