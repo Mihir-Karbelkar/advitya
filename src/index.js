@@ -5,9 +5,11 @@ import HamMenu from "./App";
 import VerticleNav from "./VerticleNav";
 import * as serviceWorker from "./serviceWorker";
 import PageScroll from "./PageScroll";
+import $ from "jquery";
 window.onbeforeunload = function() {
   window.scrollTo(0, 0);
 };
+
 ReactDOM.render(<HamMenu />, document.getElementById("hamburger-root"));
 ReactDOM.render(<VerticleNav />, document.getElementById("verticlenav-root"));
 ReactDOM.render(<PageScroll />, document.getElementById("pt-main"));
