@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import $ from "jquery";
 import "./VerticleNav.css";
-import { scrollWindowUp } from "./PageT";
-import { scrollWindowDown } from "./PageT";
+
 class VerticleNav extends Component {
   constructor(props) {
     super(props);
@@ -42,8 +41,13 @@ class VerticleNav extends Component {
           <div className="nav-item" id="number2">
             <div className="nav-number">03</div>
             <div className="bar">&nbsp;</div>
-            <div className="nav-text">CultureFest</div>
+            <div className="nav-text">CulturalFest</div>
           </div>{" "}
+          <div className="nav-item" id="number3">
+            <div className="nav-number">04</div>
+            <div className="bar">&nbsp;</div>
+            <div className="nav-text">SportsFest</div>
+          </div>
         </div>
       </div>
     );

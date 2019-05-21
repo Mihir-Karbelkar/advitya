@@ -1,0 +1,109 @@
+body {
+    background: #000000;
+    font-family: "Avenir", sans-serif;
+    text-align: center;
+  }
+  .container {
+    width: 400px;
+    height: 300px;
+    margin: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    position: relative;
+  }
+  .content {
+    transform: translatez(70px) scale(0.8);
+    line-height: 1.5em;
+  }
+  .content h1 {
+    position: absolute;
+  }
+  .content p {
+    margin-top: 50px;
+    line-height: 2em;
+  }
+  .front {
+    background-size: 100vh;
+    background-size: cover;
+    background-color: #0f0f0f;
+  }
+  .logo{
+    height: 150px;
+  }
+  .top{
+    position: -webkit-sticky; 
+    position: fixed;
+    top: 0px;
+    height: 135px;
+    width: 100%;
+    background-color: #000000;
+    border: 2px solid #000000;
+    border-bottom-color: rgb(255, 255, 255);
+    z-index: 999;
+  }
+
+  ul {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    margin: 2rem 0;
+    padding-left: 0;
+    text-align: center;
+  
+  }
+  
+  
+  a {
+    color: rgb(0, 0, 0);
+    display: block;
+    padding: 1em;
+    text-decoration: none;
+   
+  }
+  .container:focus{
+    color: #1c9edc;
+    text-decoration: underline;
+    border-radius: 8px;
+    -webkit-transform: scale(1.15);
+    transform: scale(1.15);
+    border: 2px solid white;
+    
+  }
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 150px;
+    width: 200px;
+  }
+  a img {
+    border: 0;
+  }
+  @media only screen and (max-width: 40rem) {
+    img {
+      max-height: 100px;
+      max-width: 50px;
+    }
+  }
+ .box{
+   margin-top: 150px
+ }
+   h1,h2 {
+      
+      color: white;
+      font-family: 'Lobster';
+     
+  }
+
+  h3 {
+    font-family: 'viga';
+    color: rgb(255, 255, 255);
+    font-weight: 300;
+    margin: 0;
+  }
+  img + h3 {
+    margin-top: 0.5em;
+  }
+ 

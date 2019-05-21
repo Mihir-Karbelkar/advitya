@@ -1,0 +1,81 @@
+@media(min-width: 400px){
+    #NavMenu{
+        width: 400px;
+    }
+    .NavMenuClosed{
+        right:-500px;
+        transition-duration: 1s;
+    }
+}
+
+@media(max-width: 399px){
+    #NavMenu{
+        width: 100%;
+    }
+    .NavMenuClosed{
+        right:-150%;
+        transition-duration: 1s;
+    }
+}
+
+#NavMenu {
+    top: 0;
+    overflow: auto;
+    position: fixed;
+    min-height: 100%;
+    background-image: linear-gradient(rgba(10, 10, 10, 0.712), rgba(17, 17, 17, 0.849));
+    z-index: 4;
+    color: white;
+    padding: 50px 20px;
+    transition-duration: 0.7s;
+}
+
+.NavMenuOpen{
+    right: 0px;
+}
+
+.NavMenuItem{
+    font-size: 50px;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.NavMenuItem:hover{
+    background-color: white;
+    color: black;
+}
+
+.NavMenuClose{
+    display: block;
+    position: absolute;
+    right: 3.2vw;
+    top: 2vh;
+    width: 20px;
+    height: 20px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+#NavMenuOpen{
+    display: block;
+    position: fixed;
+    right: 3.2vw;
+    top: 2vh;
+    width: 30px;
+    height: 30px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.NavMenuOpenShow {
+    opacity: 1;
+    z-index: 3;
+    transition-delay: 0.5s;
+}
+
+.NavMenuOpenHide {
+    opacity: 0;
+    z-index: -3;
+}

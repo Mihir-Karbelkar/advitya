@@ -1,54 +1,149 @@
 .CollectionOfItems {
-    height: 200px;
-    width: 200px;
-    border-radius: 50%;
-    background-color: #7100C9;
-    -webkit-transform: rotate(-90deg);
-    transform: rotate(-90deg);
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  background-color: #7100c9;
+  margin-left: -100px;
+  margin-top: -100px;
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  z-index: 2;
 }
 
-.Trophy{
-    position: absolute;
-    top: 0%;
-    left: 75%;
+.Trophy {
+  position: absolute;
+  top: 0%;
+  left: 75%;
 }
 
-.Medal{
-    position: absolute;
-    top: 17%;
-    left: 75%;
+.Medal {
+  position: absolute;
+  left: -20%;
+  animation: rise 1s ease-in-out;
+  z-index: -1;
+}
+.SportsItem-3 {
+  top: -60%;
+  -webkit-transform: rotate(-270deg);
+  transform: rotate(-180deg);
+}
+.SportsItem-4 {
+  top: 90%;
+  -webkit-transform: rotate(270deg);
+  transform: rotate(180deg);
+}
+.Hand {
+  position: absolute;
+  top: 0%;
+  left: 90%;
+  z-index: -1;
 }
 
-.SportsItem-1 img{
-    -webkit-transform: rotate(-30deg);
-    transform: rotate(-30deg);
+.SportsItem-1 img {
+  -webkit-transform: rotate(-55deg);
+  transform: rotate(-55deg);
 }
 
-.SportsItem-2 img{
-    -webkit-transform: rotate(30deg);
-    transform: rotate(30deg);
+.SportsItem-2 img {
+  -webkit-transform: rotate(55deg);
+  transform: rotate(55deg);
 }
 
-.SportsItem-3 img{
-    -webkit-transform: rotate(-90deg);
-    transform: rotate(-90deg);
+.hide .SportsItem-3 {
+  transform: rotate(-90deg);
+  left: 100%;
 }
 
-.SportsItem-4 img{
-    -webkit-transform: rotate(90deg);
-    transform: rotate(90deg);
+.hide .SportsItem-4 {
+  transform: rotate(90deg);
+
+  left: 100%;
+}
+.SportsItem-3 {
+  transition: 0.35s;
 }
 
-.EarthPlanetContainer:hover .SportsItem img{
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-    transition-duration: 0.5s;
-    transition-delay: 0.5s;
-    animation: none;
+.SportsItem-4 {
+  transition: 0.35s;
 }
 
+.SportsItem-5 img {
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  height: 200px;
+  width: 200px;
+}
+
+.hide .SportsItem img {
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  transition-duration: 0.1s;
+  transition-delay: 0.1s;
+  animation: none;
+}
+
+.hide .Hand {
+  transition-duration: 0.1s;
+  animation: rise 1s ease-in-out;
+}
 .SportsItem img {
-    width: 200px;
-    transform-origin: -25% 50%;
-    transition-duration: 0.5s;
+  width: 200px;
+  transform-origin: -25% 50%;
+  transition-duration: 0.5s;
+}
+@keyframes rise {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes trophy1move {
+  0% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(10deg);
+  }
+}
+@keyframes trophy2move {
+  50% {
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(55deg);
+  }
+}
+@keyframes medal1move {
+  50% {
+    left: 10%;
+    -webkit-transform: rotate(-160deg);
+    transform: rotate(-160deg);
+  }
+  100% {
+    left: -20%;
+    -webkit-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+  }
+}
+@keyframes medal2move {
+  50% {
+    left: 10%;
+    -webkit-transform: rotate(160deg);
+    transform: rotate(160deg);
+  }
+  100% {
+    left: -20%;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
 }

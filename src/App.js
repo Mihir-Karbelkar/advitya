@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import "./App.css";
 import Foreground from "./components/Stars/Foreground";
-import ham from "./ham.svg";
-import $ from "jquery";
+import NavMenu from "./components/components/NavMenu";
+
 class HamMenu extends Component {
   constructor(props) {
     super(props);
@@ -37,26 +37,8 @@ class HamMenu extends Component {
   render() {
     return (
       <div id="parent">
+        <NavMenu />
         <Foreground size="B" />
-        <div id="hamburger-root">
-          <div id="hamburger">
-            <img id="toggle" onClick={this.openNav} src={ham} />{" "}
-          </div>
-          <div id="ham" className="ham-menu">
-            <a
-              href="javascript:void(0)"
-              className="closebtn"
-              onClick={this.closeNav}
-            >
-              &times;
-            </a>
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Registration</a>
-            <a href="#">Events</a>
-            <a href="#">Sponsors</a>
-          </div>
-        </div>
       </div>
     );
   }

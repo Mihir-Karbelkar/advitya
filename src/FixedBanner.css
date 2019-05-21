@@ -1,0 +1,59 @@
+.banner {
+  -webkit-animation: bannermove 10s linear infinite;
+  -moz-animation: bannermove 10s linear infinite;
+  -ms-animation: bannermove 10s linear infinite;
+  -o-animation: bannermove 10s linear infinite;
+  animation: bannermove 10s linear infinite;
+  animation-delay: -10ms;
+  -webkit-animation-delay: -10ms;
+  height: 50px;
+  width: 100%;
+  position: fixed;
+  z-index: 5;
+  top: 0;
+}
+
+@keyframes bannermove {
+  0% {
+    margin-left: -20%;
+  }
+  100% {
+    margin-left: 120%;
+  }
+}
+
+@-moz-keyframes bannermove {
+  0% {
+    margin-left: -20%;
+  }
+  100% {
+    margin-left: 120%;
+  }
+}
+
+@-webkit-keyframes bannermove {
+  0% {
+    margin-left: -20%;
+  }
+  100% {
+    margin-left: 120%;
+  }
+}
+
+@-ms-keyframes bannermove {
+  0% {
+    margin-left: -20%;
+  }
+  100% {
+    margin-left: 120%;
+  }
+}
+
+@-o-keyframes bannermove {
+  0% {
+    margin-left: -20%;
+  }
+  100% {
+    margin-left: 120%;
+  }
+}

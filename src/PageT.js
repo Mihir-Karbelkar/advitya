@@ -8,6 +8,7 @@ const previousTouchMove = Symbol();
 const scrolling = Symbol();
 const wheelScroll = Symbol();
 const touchMove = Symbol();
+const click = Symbol();
 const keyPress = Symbol();
 const onWindowResized = Symbol();
 const addNextComponent = Symbol();
@@ -30,7 +31,6 @@ export default class PageT extends React.Component {
     blockScrollUp: PropTypes.bool,
     blockScrollDown: PropTypes.bool
   };
-
   static defaultProps = {
     animationTimer: 1000,
     transitionTimingFunction: "ease-in-out",
@@ -53,10 +53,9 @@ export default class PageT extends React.Component {
     document.ontouchmove = event => {
       event.preventDefault();
     };
-
     this._pageContainer.addEventListener("touchmove", this[touchMove]);
     this._pageContainer.addEventListener("keydown", this[keyPress]);
-
+    this._pageContainer.addEventListener("click", this[click]);
     let componentsToRenderLength = 0;
 
     if (!_.isNil(this.props.children[this.state.componentIndex])) {
@@ -169,6 +168,7 @@ export default class PageT extends React.Component {
             transition: `transform ${animationTimer}ms ${transitionTimingFunction}`
           }}
           tabIndex={0}
+          id="transition-container"
         >
           {this[setRenderComponents]()}
         </div>
@@ -186,7 +186,7 @@ export default class PageT extends React.Component {
     } else {
       this[scrollWindowDown]();
       if (
-        this.state.componentIndex + 1 ==
+        this.state.componentIndex + 1 ===
         this.state.componentsToRenderLength
       ) {
       } else {
@@ -194,6 +194,43 @@ export default class PageT extends React.Component {
           .children()
           .children()
           .addClass("hide");
+      }
+    }
+  };
+  [click] = event => {
+    if (
+      $(event.target)
+        .parent()
+        .parent()
+        .hasClass("chevs") ||
+      $(event.target)
+        .parent()
+        .hasClass("chevs")
+    ) {
+      if (
+        $(event.target)
+          .parent()
+          .parent()
+          .attr("id")
+          .indexOf("up") != -1
+      )
+        this[scrollWindowUp]();
+      else if (
+        $(event.target)
+          .parent()
+          .parent()
+          .attr("id")
+          .indexOf("down") != -1
+      )
+        this[scrollWindowDown]();
+    } else if ($(event.target).hasClass("nav-item")) {
+      var curr = parseInt($(".active").attr("id")[6]);
+      var to = parseInt($(event.target).attr("id")[6]);
+
+      if (curr > to) {
+        for (var i = curr; i >= to; i--) this[scrollWindowUp]();
+      } else if (curr < to) {
+        for (var i = curr; i <= to; i++) this[scrollWindowDown]();
       }
     }
   };
@@ -209,7 +246,7 @@ export default class PageT extends React.Component {
       } else {
         this[scrollWindowDown]();
         if (
-          this.state.componentIndex + 1 ==
+          this.state.componentIndex + 1 ===
           this.state.componentsToRenderLength
         ) {
         } else {
@@ -235,7 +272,7 @@ export default class PageT extends React.Component {
     if (_.isEqual(event.keyCode, KEY_DOWN)) {
       this[scrollWindowDown]();
       if (
-        this.state.componentIndex + 1 ==
+        this.state.componentIndex + 1 ===
         this.state.componentsToRenderLength
       ) {
       } else {
@@ -285,7 +322,7 @@ export default class PageT extends React.Component {
             ref={c => (this["container_" + i] = c)}
             style={{ height: "100%", width: "100%" }}
             className={"number" + i}
-            id={i == 0 ? "next" : null}
+            id={i === 0 ? "next" : null}
           >
             {this.props.children[i]}
           </div>
@@ -307,6 +344,7 @@ export default class PageT extends React.Component {
           .componentIndex -
           1) *
           -100}%, 0)`;
+
         if (this.props.pageOnChange) {
           this.props.pageOnChange(this.state.componentIndex);
         }

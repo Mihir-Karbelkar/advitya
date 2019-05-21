@@ -7,7 +7,12 @@ class CulturePlanet extends Component {
     return (
       <div className="CulturePlanetContainer hide">
         <CulturePlanetBackground />
-        <div className="CulturePlanet">
+        <div
+          className="CulturePlanet"
+          onClick={() => {
+            window.location = "/Advitya19/events";
+          }}
+        >
           <div className="CulturePlanetShadow" />
         </div>
         <div className="CulturePlanetHead">

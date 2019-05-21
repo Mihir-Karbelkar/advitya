@@ -7,7 +7,12 @@ class TechPlanet extends Component {
     return (
       <div className="TechPlanetContainer hide">
         <TechPlanetBackground />
-        <div className="TechPlanet">
+        <div
+          className="TechPlanet"
+          onClick={() => {
+            window.location = "/Advitya19/events";
+          }}
+        >
           <div className="TechPlanetShadow" />
         </div>
         <div className="TechPlanetHead">
